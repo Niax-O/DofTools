@@ -1,29 +1,28 @@
-# DOFTOOLS WIKI — V1.5.0
+# DOFTOOLS WIKI — V1.6.0
 
 Wiki officiel du projet **DOFTOOLS**.
 
-## V1.5.0 — onboarding & dépannage
-- refonte complète de **Bien démarrer** en parcours de 5 étapes ;
-- nouveau tableau **Permissions Discord** : permission / utilité / statut ;
-- nouvelle page **Dépannage général** ;
-- FAQ enrichie avec problèmes fréquents repliables ;
-- Roadmap enrichie avec pourcentages d’avancement documentaire ;
-- boutons **Copier** explicites ajoutés aux commandes ;
-- amélioration du rendu mobile des tableaux et guides ;
-- passage à **20 pages dédiées** + page 404 ;
-- nouveau fichier `assets/wiki-v15.css`.
+## V1.6.0 — visuels internes & QA
+- bannières internes automatiques pour les grandes rubriques ;
+- refonte visuelle de **Statut du projet** avec indicateurs de couverture ;
+- **Glossaire** avec recherche instantanée ;
+- **Liens utiles** transformés en cartes vérifiées ;
+- navigation mobile améliorée avec fond de fermeture et zones tactiles plus confortables ;
+- passe QA sur la cohérence des versions, navigation et ressources ;
+- nouveau fichier `assets/wiki-v16.css`.
 
 ## Base stable V1
+- 20 pages dédiées + page 404 ;
 - accueil premium avec bannière fantasy originale ;
 - recherche globale `Ctrl + K` ;
 - 33 commandes documentées, filtrables et copiables ;
 - breadcrumbs, sommaires et navigation Précédent / Suivant ;
-- guides Joueur, Support, Administration et Permissions ;
+- parcours Bien démarrer, Permissions Discord et Dépannage général ;
 - Statut du projet, Roadmap, FAQ, glossaire, historique et liens utiles ;
 - responsive PC, tablette et téléphone ;
 - sitemap et robots.txt.
 
 ## Direction
-Le wiki doit rester très visuel, court et immédiatement compréhensible. Le dépannage doit proposer des corrections ciblées plutôt que recommander des permissions excessives ou des modifications globales.
+Le wiki doit rester très visuel, court et immédiatement compréhensible. Les visuels internes doivent aider à distinguer les rubriques sans reproduire d’assets officiels protégés. Les fonctions futures restent clairement séparées des fonctions confirmées.
 
 Site : https://niax-o.github.io/DofTools/
