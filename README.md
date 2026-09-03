@@ -1,39 +1,30 @@
-# DOFTOOLS WIKI — V1.1.0
+# DOFTOOLS WIKI — V1.2.0
 
 Wiki officiel du projet **DOFTOOLS**.
 
-## V1.1.0 — sécurité, statut et navigation clavier
-- ajout de la page **Statut du projet** ;
-- ajout du guide **Permissions Discord** ;
-- passage à **18 pages dédiées** + page 404 ;
-- recherche globale enrichie avec les nouvelles rubriques ;
-- navigation dans les résultats avec `↑` / `↓` puis `Entrée` ;
-- commandes copiables également au clavier ;
-- sitemap mis à jour.
+## V1.2.0 — navigation documentaire
+- ajout de la page **Roadmap DOFTOOLS** ;
+- passage à **19 pages dédiées** + page 404 ;
+- sidebar harmonisée automatiquement sur toutes les pages internes ;
+- breadcrumbs `Wiki › rubrique` ;
+- navigation **Précédent / Suivant** entre les guides ;
+- roadmap séparant clairement disponible, en amélioration et prévu ;
+- styles des pages internes enrichis.
 
 ## Base stable V1
 - accueil premium avec bannière fantasy originale ;
-- recherche globale avec `Ctrl + K` ;
-- 33 commandes documentées ;
-- navigation PC, tablette et mobile ;
+- recherche globale `Ctrl + K` avec navigation clavier ;
+- 33 commandes documentées et copiables ;
+- guide Permissions Discord ;
+- page Statut du projet ;
 - FAQ, glossaire, journal des mises à jour et liens utiles ;
-- `sitemap.xml` et `robots.txt` ;
-- documentation concise et prudente sur les fonctions réellement disponibles.
+- responsive PC, tablette et téléphone ;
+- sitemap et robots.txt.
 
 ## Pages principales
-Bien démarrer · Commandes Slash · Profil & progression · Quêtes & succès · Groupes & donjons · Métiers & craft · Économie · Almanax · Encyclopédie · Communauté · Support & tickets · Administration & sécurité · Statut du projet · Permissions Discord · FAQ · Glossaire · Mises à jour · Liens utiles.
-
-## Structure
-- `index.html` — accueil ;
-- `pages/` — guides dédiés ;
-- `assets/wiki.css` — design principal ;
-- `assets/wiki.js` — navigation, recherche globale et interactions ;
-- `assets/hero-doftools.svg` — bannière fantasy originale ;
-- `404.html` — page introuvable ;
-- `sitemap.xml` — indexation des pages ;
-- `robots.txt` — directives aux moteurs de recherche.
+Bien démarrer · Commandes Slash · Profil & progression · Quêtes & succès · Groupes & donjons · Métiers & craft · Économie · Almanax · Encyclopédie · Communauté · Support & tickets · Administration · Permissions Discord · Statut du projet · Roadmap · FAQ · Glossaire · Mises à jour · Liens utiles.
 
 ## Direction
-Le wiki doit rester très visuel, court, lisible et immédiatement compréhensible. L’identité graphique est originale et aucun asset officiel DOFUS n’est intégré directement.
+Le wiki doit rester très visuel, court, lisible et immédiatement compréhensible. Les fonctions futures ne doivent jamais être présentées comme déjà disponibles.
 
 Site : https://niax-o.github.io/DofTools/
