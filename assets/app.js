@@ -1,0 +1,2 @@
+const input=document.querySelector('#search'), items=[...document.querySelectorAll('.searchable')], empty=document.querySelector('#empty');
+input.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();let shown=0;items.forEach(el=>{const ok=!q||el.dataset.search.toLowerCase().includes(q);el.style.display=ok?'':'none';if(ok)shown++});empty.hidden=shown!==0;if(q)document.querySelector('#commandes').scrollIntoView({behavior:'smooth'});});
