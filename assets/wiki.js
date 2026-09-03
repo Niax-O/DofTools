@@ -1,3 +1,4 @@
+const v14=document.createElement('link');v14.rel='stylesheet';v14.href=location.pathname.includes('/pages/')?'../assets/wiki-v14.css':'assets/wiki-v14.css';document.head.appendChild(v14);
 const menu=document.querySelector('.menu'),side=document.querySelector('.sidebar');
 const entries=[
 ['Bien démarrer','Installation, setup, diagnostic','demarrage.html',['demarrage','démarrage','setup','installation','diagnostic']],
