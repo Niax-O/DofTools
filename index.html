@@ -1,163 +1,135 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DOFTOOLS Wiki — V0.4.01</title><link rel="stylesheet" href="assets/style.css"></head>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081019">
+<meta name="description" content="Wiki officiel DOFTOOLS : commandes, progression, groupes, métiers, encyclopédie, support et administration.">
+<title>DOFTOOLS Wiki</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
 <body>
-<aside><div class="brand"><span class="mark">D</span><div><b>DOFTOOLS</b><small>WIKI</small></div></div>
-<nav>
-<a href="#accueil">Accueil</a><a href="#demarrer">Bien démarrer</a><a href="#modules">Modules</a><a href="#profil">Profil & progression</a><a href="#support">Support</a>
-<a href="#commandes">Commandes</a><a href="#center">Intelligence Center</a><a href="#securite">Administration</a><a href="#depannage">Dépannage</a>
-</nav><div class="ver">Documentation bot <b>V0.4.01</b></div></aside>
+<button id="menuButton" class="menu-button" aria-label="Ouvrir le menu">☰</button>
+<aside id="sidebar" class="sidebar">
+  <a class="brand" href="#accueil">
+    <span class="brand-mark">◈</span>
+    <span><strong>DOFTOOLS</strong><small>WIKI</small></span>
+  </a>
+  <nav>
+    <a class="nav-home active" href="#accueil">⌂ <span>Accueil</span></a>
+    <p>DÉMARRER</p>
+    <a href="#demarrage">🚀 <span>Démarrage rapide</span></a>
+    <a href="#apropos">🧭 <span>À propos de DOFTOOLS</span></a>
+    <a href="#commandes">⌨ <span>Commandes Slash</span></a>
+    <p>FONCTIONNALITÉS</p>
+    <a href="#profil">👤 <span>Profil & progression</span></a>
+    <a href="#quetes">📜 <span>Quêtes & succès</span></a>
+    <a href="#groupes">⚔ <span>Groupes & donjons</span></a>
+    <a href="#metiers">🛠 <span>Métiers & craft</span></a>
+    <a href="#economie">🪙 <span>Économie</span></a>
+    <a href="#almanax">📅 <span>Almanax</span></a>
+    <a href="#encyclopedie">📚 <span>Encyclopédie</span></a>
+    <a href="#communaute">🎉 <span>Communauté</span></a>
+    <p>SUPPORT</p>
+    <a href="#support">🎫 <span>Support & tickets</span></a>
+    <a href="#faq">❔ <span>FAQ</span></a>
+    <p>ADMINISTRATION</p>
+    <a href="#administration">🛡 <span>Sécurité & modération</span></a>
+  </nav>
+  <div class="side-footer"><b>◈ DOFTOOLS WIKI</b><span>Version 0.6.0</span><span>Bot documenté : V0.4.01</span></div>
+</aside>
+
 <main>
-<section id="accueil" class="hero"><div class="eyebrow">DOCUMENTATION OFFICIELLE • V0.5.0 DU WIKI</div>
-<h1>Maîtriser <span>DOFTOOLS</span></h1><p>Le centre d’aide du bot Discord DOFTOOLS : installation, modules, commandes, outils joueurs et administration.</p>
-<div class="search"><input id="search" placeholder="Rechercher une commande ou une fonction…"></div>
-<div class="stats"><div><b>9</b><span>modules</span></div><div><b>33</b><span>commandes déjà indexées</span></div><div><b>V0.4.01</b><span>bot analysé</span></div></div>
+<header id="accueil" class="hero">
+  <div class="hero-art"></div>
+  <div class="hero-content">
+    <span class="hero-kicker">DOCUMENTATION OFFICIELLE</span>
+    <h1>DOFTOOLS <em>WIKI</em></h1>
+    <p>Le guide clair et visuel pour maîtriser ton assistant Discord dédié à l’univers de DOFUS.</p>
+    <div class="hero-search">
+      <span>⌕</span><input id="search" type="search" placeholder="Rechercher une commande, un module, une fonction…" autocomplete="off">
+      <kbd>Ctrl K</kbd>
+    </div>
+  </div>
+  <div class="hero-features">
+    <div><b>🚀 SIMPLE</b><span>Les outils essentiels accessibles rapidement.</span></div>
+    <div><b>⚡ RAPIDE</b><span>33 commandes slash déjà indexées.</span></div>
+    <div><b>🛡 SÉCURISÉ</b><span>Permissions ciblées et tickets privés.</span></div>
+    <div><b>👥 COMMUNAUTAIRE</b><span>Groupes, événements et entraide.</span></div>
+  </div>
+</header>
+
+<section id="demarrage" class="section-block first-block">
+  <div class="section-heading"><span>🚀</span><div><h2>Démarrage rapide</h2><p>Trois étapes pour prendre DOFTOOLS en main.</p></div></div>
+  <div class="quick-layout">
+    <div class="quick-steps">
+      <article><i>1</i><div><h3>Installe DOFTOOLS</h3><p>Ajoute le bot à ton serveur Discord avec les permissions nécessaires.</p><a href="#apropos">Voir les prérequis →</a></div></article>
+      <article><i>2</i><div><h3>Lance <code>/setup-doftools</code></h3><p>DOFTOOLS prépare automatiquement sa structure et ses panneaux permanents.</p><a href="#commandes">Voir la commande →</a></div></article>
+      <article><i>3</i><div><h3>Crée ton profil</h3><p>Classe, serveur, activités et objectifs permettent de personnaliser ton expérience.</p><a href="#profil">Découvrir le profil →</a></div></article>
+    </div>
+    <aside class="status-card">
+      <div class="status-title"><h3>ÉTAT DE LA DOCUMENTATION</h3><span>● À JOUR</span></div>
+      <dl><div><dt>🧩 Modules</dt><dd>9</dd></div><div><dt>⌨ Commandes</dt><dd>33</dd></div><div><dt>🤖 Version bot</dt><dd>V0.4.01</dd></div><div><dt>📘 Version wiki</dt><dd>V0.6.0</dd></div></dl>
+      <a class="status-link" href="#commandes">Voir toutes les commandes ↗</a>
+    </aside>
+  </div>
 </section>
-<section id="demarrer"><div class="title"><span>01</span><div><h2>Bien démarrer</h2><p>Installation, contrôle et maintenance sans manipulation inutile.</p></div></div>
-<div class="steps">
-<article><b>1</b><h3>Installer</h3><p>Ajoute le bot au serveur et vérifie que ses permissions nécessaires sont disponibles.</p></article>
-<article><b>2</b><h3>Configurer</h3><p>Lance <code>/setup-doftools</code>. DOFTOOLS prépare sa structure pour le serveur.</p></article>
-<article><b>3</b><h3>Contrôler</h3><p>Utilise <code>/diagnostic</code> pour vérifier permissions, modules, salons gérés et isolation des données.</p></article>
-</div><div class="note">DOFTOOLS fonctionne en édition <strong>COMPLET</strong>. Les modules peuvent être activés ou désactivés avec <code>/doftools-config</code>.</div>
+
+<section id="explorer" class="section-block">
+  <div class="section-heading"><span>🌿</span><div><h2>Explorer DOFTOOLS</h2><p>Chaque univers possède sa couleur et ses outils.</p></div></div>
+  <div class="feature-grid">
+    <a class="feature-card green searchable" href="#profil" data-search="profil progression xp objectifs niveau personnalisation"><span class="feature-icon">🧭</span><h3>PROFIL & PROGRESSION</h3><p>Niveau, XP, objectifs, activités et personnalisation du joueur.</p><b>Voir plus →</b></a>
+    <a class="feature-card orange searchable" href="#apropos" data-search="classes sorts éléments builds informations"><span class="feature-icon">🔥</span><h3>CLASSES & SORTS</h3><p>Base prête à accueillir les guides de classes, éléments et builds.</p><b>Voir plus →</b></a>
+    <a class="feature-card blue searchable" href="#quetes" data-search="quêtes succes récompenses progression"><span class="feature-icon">⭐</span><h3>QUÊTES & SUCCÈS</h3><p>Objectifs, entraide et progression autour des contenus du Monde des Douze.</p><b>Voir plus →</b></a>
+    <a class="feature-card purple searchable" href="#groupes" data-search="groupes donjons recherche joueurs"><span class="feature-icon">🏰</span><h3>GROUPES & DONJONS</h3><p>Recherche de groupe, donjons et outils pour trouver des compagnons.</p><b>Voir plus →</b></a>
+    <a class="feature-card gold searchable" href="#metiers" data-search="métiers craft recettes ressources fabrication"><span class="feature-icon">⚒</span><h3>MÉTIERS & CRAFT</h3><p>Métiers, recettes, ressources et préparation des fabrications.</p><b>Voir plus →</b></a>
+    <a class="feature-card lime searchable" href="#communaute" data-search="activités contenu événements giveaways communauté"><span class="feature-icon">🎯</span><h3>ACTIVITÉS & CONTENUS</h3><p>Événements, concours, entraide et animation communautaire.</p><b>Voir plus →</b></a>
+    <a class="feature-card cyan searchable" href="#economie" data-search="économie kamas favoris farm marché"><span class="feature-icon">🪙</span><h3>ÉCONOMIE</h3><p>Favoris, suivi économique et futurs outils d’aide au farm.</p><b>Voir plus →</b></a>
+    <a class="feature-card red searchable" href="#profil" data-search="objectifs quotidiens hebdomadaires progression"><span class="feature-icon">🏆</span><h3>OBJECTIFS</h3><p>Jusqu’à 10 objectifs actifs avec historique et restauration.</p><b>Voir plus →</b></a>
+    <a class="feature-card sky searchable" href="#almanax" data-search="almanax bonus jour calendrier"><span class="feature-icon">📅</span><h3>ALMANAX</h3><p>Consultation de l’Almanax et espace prévu pour les bonus du jour.</p><b>Voir plus →</b></a>
+    <a class="feature-card indigo searchable" href="#encyclopedie" data-search="encyclopédie objets ressources équipements"><span class="feature-icon">📖</span><h3>ENCYCLOPÉDIE</h3><p>Recherche d’objets et accès centralisé aux informations Dofus 3.</p><b>Voir plus →</b></a>
+    <a class="feature-card teal searchable" href="#communaute" data-search="communauté actualités événements concours"><span class="feature-icon">👥</span><h3>COMMUNAUTÉ</h3><p>Actualités, événements, giveaways et vie du serveur.</p><b>Voir plus →</b></a>
+    <a class="feature-card coral searchable" href="#support" data-search="support tickets bugs signalement partenariat"><span class="feature-icon">🎫</span><h3>SUPPORT & TICKETS</h3><p>Besoin d’aide ? Ouvre un ticket privé adapté à ta demande.</p><b>Voir plus →</b></a>
+  </div>
 </section>
 
-<section id="demarrage"><div class="title"><span>01</span><div><h2>Démarrage rapide</h2><p>Comprendre DOFTOOLS en moins d’une minute.</p></div></div>
-<div class="steps">
-<article><b>1</b><h3>Crée ton profil</h3><p>Classe, serveur Dofus et niveau.</p></article>
-<article><b>2</b><h3>Choisis ton objectif</h3><p>Quête, succès, donjon, métier, craft ou build.</p></article>
-<article><b>3</b><h3>Trouve ton groupe</h3><p>Crée une recherche si tu as besoin de joueurs.</p></article>
-</div>
-<div class="note"><strong>Astuce :</strong> « Que faire maintenant ? » utilise ta progression pour proposer une prochaine action.</div></section>
-
-<section id="univers"><div class="title"><span>✦</span><div><h2>Univers DOFTOOLS</h2><p>Repère les outils par leur ambiance visuelle.</p></div></div>
-<div class="theme-grid">
-<article class="theme t-prog"><h3>🧭 Progression</h3><p>Profil, XP et objectifs.</p></article>
-<article class="theme t-quest"><h3>📖 Quêtes & succès</h3><p>Avancer et accomplir.</p></article>
-<article class="theme t-group"><h3>🏰 Groupes & donjons</h3><p>Trouver des compagnons.</p></article>
-<article class="theme t-craft"><h3>🛠️ Métiers & craft</h3><p>Récolter et fabriquer.</p></article>
-<article class="theme t-economy"><h3>💰 Économie</h3><p>Farm et favoris.</p></article>
-<article class="theme t-community"><h3>🎁 Communauté</h3><p>Événements et concours.</p></article>
-</div></section>
-<section id="modules"><div class="title"><span>02</span><div><h2>Les 9 modules</h2><p>Chaque grande fonction du serveur peut être pilotée indépendamment.</p></div></div>
-<div class="grid"><article class="module searchable" data-search="Progression & profils Profils, XP, classement, objectifs et progression."><h3>Progression & profils</h3><p>Profils, XP, classement, objectifs et progression.</p></article>
-<article class="module searchable" data-search="Quêtes & succès Espace d’entraide et outils liés aux quêtes/succès."><h3>Quêtes & succès</h3><p>Espace d’entraide et outils liés aux quêtes/succès.</p></article>
-<article class="module searchable" data-search="Groupes & donjons Recherche de groupe et outils de donjon."><h3>Groupes & donjons</h3><p>Recherche de groupe et outils de donjon.</p></article>
-<article class="module searchable" data-search="Métiers & craft Métiers, recettes et listes de craft."><h3>Métiers & craft</h3><p>Métiers, recettes et listes de craft.</p></article>
-<article class="module searchable" data-search="Économie & favoris Suivi économique et favoris."><h3>Économie & favoris</h3><p>Suivi économique et favoris.</p></article>
-<article class="module searchable" data-search="Encyclopédie Recherche d’objets Dofus 3."><h3>Encyclopédie</h3><p>Recherche d’objets Dofus 3.</p></article>
-<article class="module searchable" data-search="Almanax & actualités Almanax et flux d’actualités."><h3>Almanax & actualités</h3><p>Almanax et flux d’actualités.</p></article>
-<article class="module searchable" data-search="Événements & giveaways Animation communautaire."><h3>Événements & giveaways</h3><p>Animation communautaire.</p></article>
-<article class="module searchable" data-search="Modération & support Tickets, staff, modération et Intelligence Center."><h3>Modération & support</h3><p>Tickets, staff, modération et Intelligence Center.</p></article></div></section>
-
-<section id="profil"><div class="title"><span>03</span><div><h2>Profil & progression</h2><p>Le profil DOFTOOLS personnalise les outils proposés à chaque joueur.</p></div></div>
-<div class="grid">
-<article class="module"><h3>Classe principale</h3><p>Le joueur choisit sa classe principale depuis un menu interactif.</p></article>
-<article class="module"><h3>Serveur Dofus</h3><p>Choix prévu pour Mikhal, Draconiros, Orukam, Imagiro, Tylezia, Tal Kasha, Hell Mina, Ombre ou un serveur personnalisé.</p></article>
-<article class="module"><h3>Activités</h3><p>Jusqu’à 5 activités favorites peuvent être associées au profil.</p></article>
-</div>
-<div class="steps">
-<article><b>Profil</b><h3>Consulter</h3><p><code>/profil</code> affiche ton profil ou celui d’un autre membre.</p></article>
-<article><b>Configuration</b><h3>Modifier</h3><p><code>/profil-config</code> ouvre l’interface interactive : classe, serveur, activités et informations.</p></article>
-<article><b>Objectifs</b><h3>Progresser</h3><p><code>/objectifs</code> gère jusqu’à 10 objectifs actifs, avec historique des objectifs terminés, suppression et restauration.</p></article>
-</div></section>
-
-<section id="communaute"><div class="title"><span>•</span><div><h2>Communauté</h2><p>Les fonctions utiles, sans mode d’emploi interminable.</p></div></div>
-<div class="grid">
-<article class="module"><h3>📢 Annonces</h3><p>Publication officielle avec prévisualisation avant envoi. Programmation depuis le Centre Staff.</p></article>
-<article class="module"><h3>🎁 Giveaways</h3><p>Inscription par bouton. « Mes participations » affiche uniquement les concours encore actifs.</p></article>
-<article class="module"><h3>👥 Groupes</h3><p>Donjon, quête, succès, farm, XP, PvP ou autre. Jusqu’à 8 joueurs.</p></article>
-</div></section>
-<section id="support"><div class="title"><span>04</span><div><h2>Support & tickets</h2><p>Un centre de support permanent avec tickets privés.</p></div></div>
-<div class="center">
-<div><h3>Support</h3><p>Question ou demande d’aide générale.</p></div>
-<div><h3>Bug</h3><p>Signaler un problème rencontré avec DOFTOOLS.</p></div>
-<div><h3>Signalement</h3><p>Situation nécessitant l’intervention du staff.</p></div>
-<div><h3>Partenariat</h3><p>Demande professionnelle ou communautaire.</p></div>
-</div><div class="note">Chaque ticket est annoncé comme <strong>privé</strong> : visible uniquement par son auteur, le staff autorisé et DOFTOOLS.</div></section>
-<section id="commandes"><div class="title"><span>05</span><div><h2>Commandes</h2><p>Index vérifié directement dans le registre des 33 commandes slash du bot V0.4.01.</p></div></div>
-<div id="cmds" class="commands"><article class="cmd searchable" data-search="ping Vérifie que DOFTOOLS fonctionne. Tous">
-<div><code>/ping</code><span class="pill">Tous</span></div><p>Vérifie que DOFTOOLS fonctionne.</p></article>
-<article class="cmd searchable" data-search="version Affiche la version de DOFTOOLS. Tous">
-<div><code>/version</code><span class="pill">Tous</span></div><p>Affiche la version de DOFTOOLS.</p></article>
-<article class="cmd searchable" data-search="maj Met à jour la structure DOFTOOLS du serveur. Direction">
-<div><code>/maj</code><span class="pill">Direction</span></div><p>Met à jour la structure DOFTOOLS du serveur.</p></article>
-<article class="cmd searchable" data-search="panels Répare et republie les panels permanents manquants. Direction">
-<div><code>/panels</code><span class="pill">Direction</span></div><p>Répare et republie les panels permanents manquants.</p></article>
-<article class="cmd searchable" data-search="setup-doftools Installe/synchronise DOFTOOLS sur le serveur. Direction">
-<div><code>/setup-doftools</code><span class="pill">Direction</span></div><p>Installe/synchronise DOFTOOLS sur le serveur.</p></article>
-<article class="cmd searchable" data-search="xp Affiche ton XP ou celui d’un membre. Tous">
-<div><code>/xp</code><span class="pill">Tous</span></div><p>Affiche ton XP ou celui d’un membre.</p></article>
-<article class="cmd searchable" data-search="classement-xp Affiche le classement XP. Tous">
-<div><code>/classement-xp</code><span class="pill">Tous</span></div><p>Affiche le classement XP.</p></article>
-<article class="cmd searchable" data-search="reglement Synchronise le règlement permanent. Direction">
-<div><code>/reglement</code><span class="pill">Direction</span></div><p>Synchronise le règlement permanent.</p></article>
-<article class="cmd searchable" data-search="ticket-panel Synchronise le centre de support permanent. Direction">
-<div><code>/ticket-panel</code><span class="pill">Direction</span></div><p>Synchronise le centre de support permanent.</p></article>
-<article class="cmd searchable" data-search="roles-panel Synchronise le panneau Profil/Rôles. Direction">
-<div><code>/roles-panel</code><span class="pill">Direction</span></div><p>Synchronise le panneau Profil/Rôles.</p></article>
-<article class="cmd searchable" data-search="profil Affiche ton profil ou celui d’un membre. Tous">
-<div><code>/profil</code><span class="pill">Tous</span></div><p>Affiche ton profil ou celui d’un membre.</p></article>
-<article class="cmd searchable" data-search="profil-config Configure ton profil DOFTOOLS. Tous">
-<div><code>/profil-config</code><span class="pill">Tous</span></div><p>Configure ton profil DOFTOOLS.</p></article>
-<article class="cmd searchable" data-search="objectifs Affiche et gère tes objectifs personnels Dofus. Tous">
-<div><code>/objectifs</code><span class="pill">Tous</span></div><p>Affiche et gère tes objectifs personnels Dofus.</p></article>
-<article class="cmd searchable" data-search="metiers Configure et affiche tes métiers Dofus. Tous">
-<div><code>/metiers</code><span class="pill">Tous</span></div><p>Configure et affiche tes métiers Dofus.</p></article>
-<article class="cmd searchable" data-search="diagnostic Vérifie permissions, modules et installation. Direction">
-<div><code>/diagnostic</code><span class="pill">Direction</span></div><p>Vérifie permissions, modules et installation.</p></article>
-<article class="cmd searchable" data-search="intelligence Ouvre le DOFTOOLS Intelligence Center. Direction">
-<div><code>/intelligence</code><span class="pill">Direction</span></div><p>Ouvre le DOFTOOLS Intelligence Center.</p></article>
-<article class="cmd searchable" data-search="doftools-config Active, désactive ou consulte les modules. Direction">
-<div><code>/doftools-config</code><span class="pill">Direction</span></div><p>Active, désactive ou consulte les modules.</p></article>
-<article class="cmd searchable" data-search="annonce Ouvre l’éditeur d’annonce multiligne. Direction">
-<div><code>/annonce</code><span class="pill">Direction</span></div><p>Ouvre l’éditeur d’annonce multiligne.</p></article>
-<article class="cmd searchable" data-search="warn Ajoute un avertissement à un membre. Staff">
-<div><code>/warn</code><span class="pill">Staff</span></div><p>Ajoute un avertissement à un membre.</p></article>
-<article class="cmd searchable" data-search="warnings Affiche les avertissements d’un membre. Staff">
-<div><code>/warnings</code><span class="pill">Staff</span></div><p>Affiche les avertissements d’un membre.</p></article>
-<article class="cmd searchable" data-search="timeout Met temporairement un membre en sourdine. Staff">
-<div><code>/timeout</code><span class="pill">Staff</span></div><p>Met temporairement un membre en sourdine.</p></article>
-<article class="cmd searchable" data-search="kick Expulse un membre du serveur. Staff">
-<div><code>/kick</code><span class="pill">Staff</span></div><p>Expulse un membre du serveur.</p></article>
-<article class="cmd searchable" data-search="purge Supprime de 1 à 100 messages récents. Staff">
-<div><code>/purge</code><span class="pill">Staff</span></div><p>Supprime de 1 à 100 messages récents.</p></article>
-<article class="cmd searchable" data-search="giveaway Lance un giveaway DOFTOOLS. Staff">
-<div><code>/giveaway</code><span class="pill">Staff</span></div><p>Lance un giveaway DOFTOOLS.</p></article>
-<article class="cmd searchable" data-search="groupe Crée une recherche de groupe interactive. Tous">
-<div><code>/groupe</code><span class="pill">Tous</span></div><p>Crée une recherche de groupe interactive.</p></article>
-<article class="cmd searchable" data-search="donjon Recherche un donjon et ouvre les outils associés. Tous">
-<div><code>/donjon</code><span class="pill">Tous</span></div><p>Recherche un donjon et ouvre les outils associés.</p></article>
-<article class="cmd searchable" data-search="craft Recherche une recette et ouvre les outils Craft. Tous">
-<div><code>/craft</code><span class="pill">Tous</span></div><p>Recherche une recette et ouvre les outils Craft.</p></article>
-<article class="cmd searchable" data-search="encyclopedie Recherche un objet dans l’encyclopédie Dofus 3. Tous">
-<div><code>/encyclopedie</code><span class="pill">Tous</span></div><p>Recherche un objet dans l’encyclopédie Dofus 3.</p></article>
-<article class="cmd searchable" data-search="conseil Propose la prochaine action utile selon ta progression. Tous">
-<div><code>/conseil</code><span class="pill">Tous</span></div><p>Propose la prochaine action utile selon ta progression.</p></article>
-<article class="cmd searchable" data-search="build Prépare une demande de build avec ton profil. Tous">
-<div><code>/build</code><span class="pill">Tous</span></div><p>Prépare une demande de build avec ton profil.</p></article>
-<article class="cmd searchable" data-search="evenement Crée un événement communautaire interactif. Direction">
-<div><code>/evenement</code><span class="pill">Direction</span></div><p>Crée un événement communautaire interactif.</p></article>
-<article class="cmd searchable" data-search="vocal Configure ton salon vocal temporaire. Tous">
-<div><code>/vocal</code><span class="pill">Tous</span></div><p>Configure ton salon vocal temporaire.</p></article>
-<article class="cmd searchable" data-search="clear Efface les messages du salon après confirmation. Staff">
-<div><code>/clear</code><span class="pill">Staff</span></div><p>Efface les messages du salon après confirmation.</p></article></div><p id="empty" hidden>Aucun résultat.</p></section>
-<section id="center"><div class="title"><span>06</span><div><h2>Intelligence Center</h2><p>Le tableau de pilotage privé réservé au staff.</p></div></div>
-<div class="center"><div><h3>Vue d’ensemble</h3><p>Centralise les signaux communautaires utiles au pilotage du serveur.</p></div>
-<div><h3>Signaux</h3><p>Exploite notamment profils, XP, objectifs et crafts enregistrés par le serveur.</p></div>
-<div><h3>Dynamique</h3><p>Une vue dédiée permet d’examiner la dynamique de la communauté.</p></div>
-<div><h3>Opportunités</h3><p>Une vue dédiée fait remonter les opportunités détectées par DOFTOOLS.</p></div></div>
-<div class="note danger">Le salon <code>🧠・pilotage-serveur</code> et la commande <code>/intelligence</code> sont réservés au staff/direction.</div>
-<div class="note">Le Center dispose de quatre vues confirmées dans le code : <strong>Vue d’ensemble</strong>, <strong>Signaux</strong>, <strong>Dynamique</strong> et <strong>Opportunités</strong>. Les interactions sont refusées aux membres hors staff.</div>
+<section id="apropos" class="section-block docs-section">
+  <div class="section-heading"><span>🧭</span><div><h2>À propos de DOFTOOLS</h2><p>Une structure automatisée conçue pour rester simple à administrer.</p></div></div>
+  <div class="info-grid"><article><h3>Installation automatisée</h3><p><code>/setup-doftools</code> installe ou synchronise la structure du serveur.</p></article><article><h3>Modules indépendants</h3><p>Les 9 modules peuvent être activés ou désactivés via <code>/doftools-config</code>.</p></article><article><h3>Diagnostic intégré</h3><p><code>/diagnostic</code> contrôle permissions, modules et installation.</p></article></div>
 </section>
-<section id="securite"><div class="title"><span>07</span><div><h2>Administration & sécurité</h2><p>Ce que DOFTOOLS contrôle pour protéger l’exploitation du serveur.</p></div></div>
-<div class="grid">
-<article class="module"><h3>Permissions ciblées</h3><p>Le diagnostic contrôle les permissions réellement utiles. Le mode Administrateur est signalé comme inutile.</p></article>
-<article class="module"><h3>Modules indépendants</h3><p>9 modules peuvent être activés ou désactivés individuellement sans changer d’édition.</p></article>
-<article class="module"><h3>Multi-serveurs</h3><p>Le diagnostic vérifie l’isolation des données et le contexte propre à chaque serveur Discord.</p></article>
-</div></section>
-<section id="depannage"><div class="title"><span>08</span><div><h2>Dépannage</h2><p>Premiers contrôles avant toute intervention.</p></div></div>
-<div class="faq"><details open><summary>Un salon ou panel manque</summary><p>Utilise <code>/panels</code> pour republier les panels permanents manquants, puis <code>/diagnostic</code>.</p></details>
-<details><summary>Une fonction indique que son module est désactivé</summary><p>La direction peut consulter ou réactiver le module avec <code>/doftools-config</code>.</p></details>
-<details><summary>Vérifier les permissions du bot</summary><p><code>/diagnostic</code> contrôle notamment Voir/Gérer les salons, Gérer les rôles/messages, Modérer et Expulser.</p></details></div></section>
-<footer>DOFTOOLS Wiki • V0.5.0 • Documentation basée sur DOFTOOLS BOT DISCORD V0.4.01</footer>
-</main><script src="assets/app.js"></script></body></html>
+
+<section id="profil" class="section-block docs-section"><div class="section-heading"><span>👤</span><div><h2>Profil & progression</h2><p>Le cœur de la personnalisation joueur.</p></div></div><div class="info-grid"><article><h3><code>/profil</code></h3><p>Affiche ton profil ou celui d’un membre.</p></article><article><h3><code>/profil-config</code></h3><p>Configure classe, serveur, activités et informations du profil.</p></article><article><h3><code>/objectifs</code></h3><p>Gère jusqu’à 10 objectifs actifs avec historique des objectifs terminés.</p></article><article><h3><code>/xp</code></h3><p>Affiche ton XP ou celui d’un autre membre.</p></article><article><h3><code>/classement-xp</code></h3><p>Affiche le classement XP du serveur.</p></article></div></section>
+
+<section id="quetes" class="section-block docs-section"><div class="section-heading"><span>⭐</span><div><h2>Quêtes & succès</h2><p>Une base documentaire dédiée à l’entraide et à la progression.</p></div></div><div class="feature-note"><b>Évolution prévue</b><p>Cette section accueillera les guides de quêtes, succès, prérequis, récompenses et liens vers les outils DOFTOOLS correspondants.</p></div></section>
+
+<section id="groupes" class="section-block docs-section"><div class="section-heading"><span>🏰</span><div><h2>Groupes & donjons</h2><p>Trouver rapidement les joueurs nécessaires.</p></div></div><div class="info-grid"><article><h3><code>/groupe</code></h3><p>Crée une recherche de groupe interactive : donjon, quête, succès, farm, XP, PvP ou autre.</p></article><article><h3><code>/donjon</code></h3><p>Recherche un donjon et ouvre les outils associés.</p></article><article><h3>Jusqu’à 8 joueurs</h3><p>Les recherches de groupe sont prévues pour les compositions jusqu’à huit membres.</p></article></div></section>
+
+<section id="metiers" class="section-block docs-section"><div class="section-heading"><span>⚒</span><div><h2>Métiers & craft</h2><p>Préparer ses métiers et fabrications.</p></div></div><div class="info-grid"><article><h3><code>/metiers</code></h3><p>Configure et affiche tes métiers Dofus.</p></article><article><h3><code>/craft</code></h3><p>Recherche une recette et ouvre les outils de craft associés.</p></article></div></section>
+
+<section id="economie" class="section-block docs-section"><div class="section-heading"><span>🪙</span><div><h2>Économie</h2><p>Suivi économique et favoris.</p></div></div><div class="feature-note"><b>Module actif dans l’architecture</b><p>Le wiki réserve cet espace aux futurs outils de marché, favoris, suivi de ressources et aide au farm.</p></div></section>
+
+<section id="almanax" class="section-block docs-section"><div class="section-heading"><span>📅</span><div><h2>Almanax & actualités</h2><p>Les informations récurrentes du jour.</p></div></div><div class="feature-note"><b>Almanax</b><p>Le module est prévu pour centraliser l’Almanax et les publications automatiques associées.</p></div></section>
+
+<section id="encyclopedie" class="section-block docs-section"><div class="section-heading"><span>📖</span><div><h2>Encyclopédie</h2><p>Retrouver rapidement un objet Dofus 3.</p></div></div><div class="info-grid"><article><h3><code>/encyclopedie</code></h3><p>Recherche un objet dans l’encyclopédie Dofus 3.</p></article><article><h3><code>/build</code></h3><p>Prépare une demande de build à partir du profil du joueur.</p></article><article><h3><code>/conseil</code></h3><p>Propose une prochaine action utile selon la progression enregistrée.</p></article></div></section>
+
+<section id="communaute" class="section-block docs-section"><div class="section-heading"><span>🎉</span><div><h2>Communauté</h2><p>Animation et communication du serveur.</p></div></div><div class="info-grid"><article><h3><code>/evenement</code></h3><p>Crée un événement communautaire interactif.</p></article><article><h3><code>/giveaway</code></h3><p>Lance un giveaway DOFTOOLS avec inscription par bouton.</p></article><article><h3><code>/annonce</code></h3><p>Ouvre l’éditeur d’annonce multiligne pour la direction.</p></article></div></section>
+
+<section id="support" class="section-block docs-section"><div class="section-heading"><span>🎫</span><div><h2>Support & tickets</h2><p>Quatre catégories pour orienter rapidement les demandes.</p></div></div><div class="ticket-grid"><article><span>💬</span><h3>Support</h3><p>Question ou demande d’aide générale.</p></article><article><span>🐞</span><h3>Bug</h3><p>Signaler un problème rencontré avec DOFTOOLS.</p></article><article><span>🚨</span><h3>Signalement</h3><p>Situation nécessitant l’intervention du staff.</p></article><article><span>🤝</span><h3>Partenariat</h3><p>Demande professionnelle ou communautaire.</p></article></div><div class="feature-note"><b>Confidentialité</b><p>Les tickets sont prévus comme espaces privés entre leur auteur, le staff autorisé et DOFTOOLS.</p></div></section>
+
+<section id="commandes" class="section-block docs-section">
+  <div class="section-heading"><span>⌨</span><div><h2>Commandes Slash</h2><p>33 commandes documentées pour le bot V0.4.01.</p></div></div>
+  <div class="command-toolbar"><button class="filter active" data-filter="Tous">Toutes</button><button class="filter" data-filter="Staff">Staff</button><button class="filter" data-filter="Direction">Direction</button><span id="commandCount"></span></div>
+  <div id="commandsGrid" class="commands-grid"></div>
+  <p id="empty" class="empty" hidden>Aucun résultat.</p>
+</section>
+
+<section id="administration" class="section-block docs-section"><div class="section-heading"><span>🛡</span><div><h2>Sécurité & administration</h2><p>Les outils réservés au staff et à la direction.</p></div></div><div class="info-grid"><article><h3>Permissions ciblées</h3><p>Le diagnostic contrôle les permissions réellement utiles ; le mode Administrateur n’est pas requis.</p></article><article><h3>Intelligence Center</h3><p><code>/intelligence</code> ouvre le centre de pilotage réservé à la direction.</p></article><article><h3>Modération</h3><p><code>/warn</code>, <code>/warnings</code>, <code>/timeout</code>, <code>/kick</code>, <code>/purge</code> et <code>/clear</code>.</p></article></div></section>
+
+<section id="faq" class="section-block docs-section"><div class="section-heading"><span>❔</span><div><h2>FAQ</h2><p>Les premiers contrôles à effectuer.</p></div></div><div class="faq"><details open><summary>Un panneau permanent a disparu</summary><p>Utilise <code>/panels</code> puis <code>/diagnostic</code>.</p></details><details><summary>Un module est désactivé</summary><p>La direction peut consulter et modifier son état avec <code>/doftools-config</code>.</p></details><details><summary>Comment vérifier l’installation ?</summary><p><code>/diagnostic</code> vérifie les permissions, les modules et la structure installée.</p></details></div></section>
+
+<footer><div><b>◈ DOFTOOLS WIKI</b><span>Documentation officielle — V0.6.0</span></div><a href="#accueil">Retour en haut ↑</a></footer>
+</main>
+<div id="searchOverlay" class="search-overlay" hidden><div class="search-results"><div class="result-title"><b>Résultats de recherche</b><button id="closeSearch">×</button></div><div id="searchResults"></div></div></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
