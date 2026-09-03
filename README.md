@@ -1,34 +1,27 @@
-# DOFTOOLS WIKI — V1.0.0
+# DOFTOOLS WIKI — V1.1.0
 
 Wiki officiel du projet **DOFTOOLS**.
 
-## V1.0.0 — première version majeure
-- bannière fantasy originale intégrée au site ;
-- recherche globale avec palette modale `Ctrl + K` ;
-- 16 pages dédiées + page 404 ;
-- 33 commandes documentées et copiables en un clic ;
+## V1.1.0 — sécurité, statut et navigation clavier
+- ajout de la page **Statut du projet** ;
+- ajout du guide **Permissions Discord** ;
+- passage à **18 pages dédiées** + page 404 ;
+- recherche globale enrichie avec les nouvelles rubriques ;
+- navigation dans les résultats avec `↑` / `↓` puis `Entrée` ;
+- commandes copiables également au clavier ;
+- sitemap mis à jour.
+
+## Base stable V1
+- accueil premium avec bannière fantasy originale ;
+- recherche globale avec `Ctrl + K` ;
+- 33 commandes documentées ;
 - navigation PC, tablette et mobile ;
 - FAQ, glossaire, journal des mises à jour et liens utiles ;
 - `sitemap.xml` et `robots.txt` ;
 - documentation concise et prudente sur les fonctions réellement disponibles.
 
 ## Pages principales
-- Bien démarrer
-- Commandes Slash
-- Profil & progression
-- Quêtes & succès
-- Groupes & donjons
-- Métiers & craft
-- Économie
-- Almanax
-- Encyclopédie
-- Communauté
-- Support & tickets
-- Administration & sécurité
-- FAQ
-- Glossaire
-- Mises à jour
-- Liens utiles
+Bien démarrer · Commandes Slash · Profil & progression · Quêtes & succès · Groupes & donjons · Métiers & craft · Économie · Almanax · Encyclopédie · Communauté · Support & tickets · Administration & sécurité · Statut du projet · Permissions Discord · FAQ · Glossaire · Mises à jour · Liens utiles.
 
 ## Structure
 - `index.html` — accueil ;
