@@ -1,28 +1,28 @@
-# DOFTOOLS WIKI — V0.6.0
+# DOFTOOLS WIKI — V0.7.0
 
 Wiki officiel du projet **DOFTOOLS**.
 
-## V0.6.0 — Refonte premium
-- Nouvelle page d’accueil inspirée des meilleurs wikis gaming modernes, avec identité DOFTOOLS originale
-- Sidebar fixe organisée par catégories
-- Hero premium et recherche globale avec raccourci `Ctrl+K`
-- 12 cartes thématiques colorées
-- Démarrage rapide + état de la documentation
-- 33 commandes slash avec filtres Tous / Staff / Direction
-- Sections dédiées : profil, quêtes, groupes, métiers, économie, Almanax, encyclopédie, communauté, support et administration
-- Navigation active automatique au défilement
-- Menu mobile et responsive complet
-- Aucune statistique fictive de serveurs/utilisateurs affichée
-
-## Versions documentées
-- Wiki : **V0.6.0**
-- Bot analysé : **V0.4.01**
-- Modules : **9**
-- Commandes : **33**
+## V0.7.0 — refonte multi-pages
+- nouvel accueil premium compact ;
+- vraie navigation multi-pages ;
+- sidebar fixe sur PC et menu mobile ;
+- recherche rapide avec `Ctrl + K` ;
+- page Bien démarrer ;
+- page Profil & progression ;
+- page Support & tickets ;
+- page Administration & sécurité ;
+- page Commandes avec les 33 commandes documentées ;
+- 9 modules conservés dans la documentation ;
+- design responsive PC, tablette et téléphone.
 
 ## Structure
-- `index.html` — interface principale
-- `assets/style.css` — identité visuelle premium et responsive
-- `assets/app.js` — recherche, filtres de commandes et navigation
+- `index.html` — accueil du wiki ;
+- `pages/` — guides dédiés ;
+- `assets/wiki.css` — design principal V0.7.0 ;
+- `assets/wiki.js` — navigation et recherche ;
+- anciens assets conservés temporairement pour compatibilité.
 
-L’identité graphique reste originale : aucun asset officiel DOFUS/Ankama n’est reproduit directement.
+## Direction
+Le wiki doit rester très visuel, court, lisible et immédiatement compréhensible. L’identité graphique est originale et aucun asset officiel DOFUS n’est intégré directement.
+
+Site : https://niax-o.github.io/DofTools/
