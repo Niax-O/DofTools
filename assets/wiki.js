@@ -1,5 +1,6 @@
 const v14=document.createElement('link');v14.rel='stylesheet';v14.href=location.pathname.includes('/pages/')?'../assets/wiki-v14.css':'assets/wiki-v14.css';document.head.appendChild(v14);
 const v15=document.createElement('link');v15.rel='stylesheet';v15.href=location.pathname.includes('/pages/')?'../assets/wiki-v15.css':'assets/wiki-v15.css';document.head.appendChild(v15);
+const v16=document.createElement('link');v16.rel='stylesheet';v16.href=location.pathname.includes('/pages/')?'../assets/wiki-v16.css':'assets/wiki-v16.css';document.head.appendChild(v16);
 const menu=document.querySelector('.menu'),side=document.querySelector('.sidebar');
 const entries=[
 ['Bien démarrer','Installation, setup, diagnostic','demarrage.html',['demarrage','démarrage','setup','installation','diagnostic']],
@@ -32,9 +33,31 @@ const navGroups=[
 ['ADMINISTRATION',[['🛡','Administration','administration.html'],['🔐','Permissions Discord','permissions.html'],['📊','Statut du projet','statut.html'],['🗺','Roadmap','roadmap.html']]],
 ['RESSOURCES',[['❔','FAQ','faq.html'],['📖','Glossaire','glossaire.html'],['🎁','Mises à jour','mises-a-jour.html'],['🔗','Liens utiles','liens-utiles.html']]]
 ];
-function canonicalSidebar(){if(!isPage||!side)return;const nav=side.querySelector('nav');if(!nav)return;const file=location.pathname.split('/').pop();nav.innerHTML=navGroups.map(([title,links])=>`<div class="nav-title">${title}</div>${links.map(([ico,label,href])=>`<a class="${href===file?'active':''}" href="${href}">${ico} ${label}</a>`).join('')}`).join('');const foot=side.querySelector('.sidefoot');if(foot)foot.innerHTML='<b>DOFTOOLS WIKI</b><span>Version 1.5.0</span><span>Onboarding & dépannage</span>';}
+function canonicalSidebar(){if(!isPage||!side)return;const nav=side.querySelector('nav');if(!nav)return;const file=location.pathname.split('/').pop();nav.innerHTML=navGroups.map(([title,links])=>`<div class="nav-title">${title}</div>${links.map(([ico,label,href])=>`<a class="${href===file?'active':''}" href="${href}">${ico} ${label}</a>`).join('')}`).join('');const foot=side.querySelector('.sidefoot');if(foot)foot.innerHTML='<b>DOFTOOLS WIKI</b><span>Version 1.6.0</span><span>Visuels & QA</span>';}
 canonicalSidebar();
-if(menu&&side)menu.addEventListener('click',()=>side.classList.toggle('open'));document.querySelectorAll('.sidebar a').forEach(a=>a.addEventListener('click',()=>side?.classList.remove('open')));
+if(menu&&side){const scrim=document.createElement('div');scrim.className='mobile-scrim';side.insertAdjacentElement('afterend',scrim);const close=()=>side.classList.remove('open');menu.addEventListener('click',()=>side.classList.toggle('open'));scrim.addEventListener('click',close);document.querySelectorAll('.sidebar a').forEach(a=>a.addEventListener('click',close));}
+const pageMeta={
+'demarrage.html':['theme-start','🚀','Bien démarrer','Installation, configuration et premières vérifications.'],
+'commandes.html':['theme-commands','⌨','Commandes Slash','Recherche, filtres, exemples et copie rapide.'],
+'profil.html':['theme-profile','🧭','Profil & progression','Classe, serveur, XP, classement et objectifs.'],
+'quetes.html':['theme-quests','📜','Quêtes & succès','Suivre sa progression et trouver de l’aide.'],
+'groupes.html':['theme-groups','⚔','Groupes & donjons','Organiser une activité et recruter sans spam.'],
+'metiers.html':['theme-craft','🛠','Métiers & craft','Recettes, ressources et organisation du craft.'],
+'economie.html':['theme-economy','🪙','Économie','Ressources, favoris et outils économiques documentés.'],
+'almanax.html':['theme-almanax','📅','Almanax','Informations journalières et évolutions confirmées.'],
+'encyclopedie.html':['theme-encyclopedia','📚','Encyclopédie','Rechercher des objets et relier les informations utiles.'],
+'communaute.html':['theme-community','🎉','Communauté','Événements, giveaways et annonces.'],
+'support.html':['theme-support','🎫','Support & tickets','Obtenir de l’aide avec un chemin court et clair.'],
+'depannage.html':['theme-troubleshoot','🧰','Dépannage général','Identifier rapidement un problème et la bonne action.'],
+'administration.html':['theme-admin','🛡','Administration','Diagnostic, maintenance, sécurité et modération.'],
+'permissions.html':['theme-permissions','🔐','Permissions Discord','Comprendre les droits sans donner plus que nécessaire.'],
+'statut.html':['theme-status','📊','Statut du projet','Vue claire sur la couverture et la stabilité documentaire.'],
+'roadmap.html':['theme-roadmap','🗺','Roadmap','Disponible, en amélioration et prévu.'],
+'faq.html':['theme-faq','❔','FAQ','Réponses rapides aux questions fréquentes.'],
+'glossaire.html':['theme-glossary','📖','Glossaire','Retrouver rapidement le vocabulaire DOFTOOLS.'],
+'liens-utiles.html':['theme-links','🔗','Liens utiles','Accès vérifiés vers les ressources du projet.']};
+function injectPageBanner(){if(!isPage)return;const file=location.pathname.split('/').pop(),meta=pageMeta[file];if(!meta)return;document.body.classList.add(meta[0]);const title=document.querySelector('.page-title');if(!title||document.querySelector('.page-banner'))return;const banner=document.createElement('section');banner.className='page-banner';banner.innerHTML=`<div class="page-banner-icon">${meta[1]}</div><b>${meta[2]}</b><span>${meta[3]}</span>`;title.insertAdjacentElement('afterend',banner)}
+injectPageBanner();
 function injectPageChrome(){if(!isPage)return;const file=location.pathname.split('/').pop();const idx=entries.findIndex(e=>e[2]===file);if(idx<0)return;const [title]=entries[idx];const pageTitle=document.querySelector('.page-title');if(pageTitle&&!pageTitle.querySelector('.breadcrumb')){const crumb=document.createElement('div');crumb.className='breadcrumb';crumb.innerHTML=`<a href="../index.html">Wiki</a><span>›</span><b>${title}</b>`;pageTitle.prepend(crumb)}const docs=document.querySelector('.docs');if(docs&&!docs.querySelector('.page-nav')){const prev=entries[idx-1],next=entries[idx+1];const nav=document.createElement('nav');nav.className='page-nav';nav.innerHTML=`${prev?`<a class="prev" href="${prev[2]}"><small>← PRÉCÉDENT</small><b>${prev[0]}</b></a>`:'<span></span>'}${next?`<a class="next" href="${next[2]}"><small>SUIVANT →</small><b>${next[0]}</b></a>`:''}`;docs.appendChild(nav)}}
 injectPageChrome();
 function slugify(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
@@ -46,7 +69,8 @@ function closeSearch(){document.querySelector('.search-overlay')?.classList.remo
 function markActive(results){results.forEach((el,i)=>el.classList.toggle('active',i===activeIndex));results[activeIndex]?.scrollIntoView({block:'nearest'})}
 function renderResults(value){const box=document.querySelector('.search-list');if(!box)return;const q=value.trim().toLowerCase();const list=entries.filter(([title,desc,,keys])=>!q||(title+' '+desc+' '+keys.join(' ')).toLowerCase().includes(q)).slice(0,10);box.innerHTML=list.length?list.map(([title,desc,file],i)=>`<a class="search-result${i===0?' active':''}" href="${target(file)}"><b>${title}</b><span>${desc}</span><i>→</i></a>`).join(''):'<div class="search-empty">Aucun résultat.</div>'}
 const q=document.querySelector('[data-wiki-search]');if(q){q.addEventListener('focus',()=>openSearch(q.value));q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();openSearch(q.value)}})}
-document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openSearch()}if(e.key==='Escape')closeSearch()});
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openSearch()}if(e.key==='Escape'){closeSearch();side?.classList.remove('open')}});
 function copyCommand(el){const text=el.dataset.copy||el.textContent.trim();navigator.clipboard.writeText(text).then(()=>{const old=el.textContent;el.textContent='✓ Copié';setTimeout(()=>el.textContent=old,900)}).catch(()=>{})}
 document.querySelectorAll('.command b').forEach(el=>{el.title='Cliquer pour copier';el.tabIndex=0;el.dataset.copy=el.textContent.trim();el.addEventListener('click',()=>copyCommand(el));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();copyCommand(el)}});if(!el.parentElement.querySelector('.copy-button')){const btn=document.createElement('button');btn.className='copy-button';btn.type='button';btn.textContent='Copier';btn.dataset.copy=el.dataset.copy;btn.addEventListener('click',e=>{e.stopPropagation();copyCommand(btn)});el.insertAdjacentElement('afterend',btn)}});
 const commandSearch=document.querySelector('[data-command-search]'),filters=[...document.querySelectorAll('[data-command-filter]')],commands=[...document.querySelectorAll('.command[data-role]')],count=document.querySelector('[data-command-count]');let role='all';function filterCommands(){const text=(commandSearch?.value||'').trim().toLowerCase();let visible=0;commands.forEach(cmd=>{const roleOk=role==='all'||cmd.dataset.role===role;const textOk=!text||cmd.textContent.toLowerCase().includes(text);const show=roleOk&&textOk;cmd.classList.toggle('hidden',!show);if(show)visible++});if(count)count.textContent=`${visible} commande${visible>1?'s':''}`;}filters.forEach(btn=>btn.addEventListener('click',()=>{role=btn.dataset.commandFilter;filters.forEach(x=>x.classList.toggle('active',x===btn));filterCommands()}));commandSearch?.addEventListener('input',filterCommands);filterCommands();
+const glossarySearch=document.querySelector('[data-glossary-search]'),glossaryCards=[...document.querySelectorAll('[data-glossary-term]')],glossaryCount=document.querySelector('[data-glossary-count]');function filterGlossary(){const text=(glossarySearch?.value||'').trim().toLowerCase();let visible=0;glossaryCards.forEach(card=>{const show=!text||card.textContent.toLowerCase().includes(text);card.classList.toggle('hidden',!show);if(show)visible++});if(glossaryCount)glossaryCount.textContent=`${visible} terme${visible>1?'s':''}`;}glossarySearch?.addEventListener('input',filterGlossary);filterGlossary();
